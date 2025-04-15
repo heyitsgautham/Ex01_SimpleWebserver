@@ -1,5 +1,5 @@
 
-#Ex 01 -Simple Web Server using Spring Boot
+## Ex 01 -Simple Web Server using Spring Boot
 
 ## AIM:
 To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
@@ -40,7 +40,7 @@ Stop the Server:
 Stop the Spring Boot server once testing is complete.
 
 
-**## Program **
+## Program 
 
 simple-web-server/
 ├── src/
@@ -53,7 +53,7 @@ simple-web-server/
 │           └── application.properties
 ├── pom.xml
 
-Pom.xml
+ # Pom.xml
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -92,7 +92,7 @@ Pom.xml
     </build>
 </project>
 
-DemoApplication.java
+# DemoApplication.java
 
 package com.example.demo;
 
@@ -107,7 +107,7 @@ public class DemoApplication {
 }
 
 
-HelloController.java
+# HelloController.java
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -123,10 +123,9 @@ public class HelloController {
 }
 
 
-application.properties:
+# application.properties:
 
-# Optional: Change port
-# server.port=8081
+ server.port=8081
 
 
 
