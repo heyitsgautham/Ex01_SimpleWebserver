@@ -3,7 +3,7 @@
 
 ## AIM:
 To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
-#ALGORITHM:
+## ALGORITHM:
 Start a New Spring Boot Project:
 
 Use Spring Initializr (https://start.spring.io/)
