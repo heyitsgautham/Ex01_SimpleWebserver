@@ -1,46 +1,44 @@
 
-## Ex 01 -Simple Web Server using Spring Boot
+# Ex 01 - Simple Web Server using Spring Boot
 
 ## AIM:
 To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
+
 ## ALGORITHM:
-Start a New Spring Boot Project:
 
-Use Spring Initializr (https://start.spring.io/)
+1. **Start a New Spring Boot Project**  
+   Use Spring Initializr (https://start.spring.io/)  
+   Select dependencies: `Spring Web`
 
-Select dependencies: Spring Web
+2. **Create the Main Application Class**  
+   This class contains the `main()` method with `@SpringBootApplication` annotation to bootstrap the application.
 
-Create the Main Application Class:
+3. **Create a Controller Class**  
+   Create a class annotated with `@RestController`.  
+   Define one or more HTTP request handler methods using `@GetMapping`, `@PostMapping`, etc.
 
-This class contains the main() method with @SpringBootApplication annotation to bootstrap the application.
+4. **Write Endpoint Methods**  
+   Inside the controller, define a simple method for handling GET requests (e.g., return “Hello World” when `/hello` is accessed).
 
-Create a Controller Class:
+5. **Run the Application**  
+   Run the application using your IDE or via the command line:
+   ```bash
+   mvn spring-boot:run
+         or
+   ./mvnw spring-boot:run
+   ```
 
-Create a class annotated with @RestController.
+6.	**Test the Endpoint**
+  Open a web browser or use Postman to visit:
+  http://localhost:8081/hello
+  You should see the output (e.g., “Hello World”).
 
-Define one or more HTTP request handler methods using @GetMapping, @PostMapping, etc.
-
-Write Endpoint Methods:
-
-Inside the controller, define a simple method for handling GET requests (e.g., return “Hello World” when /hello is accessed).
-
-Run the Application:
-
-Run the application using your IDE or via the command line (mvn spring-boot:run or ./mvnw spring-boot:run).
-
-Test the Endpoint:
-
-Open a web browser or use Postman to visit:
-http://localhost:8080/hello
-
-You should see the output (e.g., "Hello World").
-
-Stop the Server:
-
+7.	**Stop the Server**
 Stop the Spring Boot server once testing is complete.
 
+⸻
 
-## Program 
+## 📁 Program Structure
 
 simple-web-server/
 ├── src/
@@ -53,8 +51,13 @@ simple-web-server/
 │           └── application.properties
 ├── pom.xml
 
- ### Pom.xml
 
+
+⸻
+
+## 📄 pom.xml
+
+```
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -91,9 +94,12 @@ simple-web-server/
         </plugins>
     </build>
 </project>
+```
 
-### DemoApplication.java
 
+## 🚀 DemoApplication.java
+
+```
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -105,9 +111,13 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
+```
 
 
-### HelloController.java
+
+## 🌐 HelloController.java
+
+```
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -121,15 +131,19 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 }
+```
+
+## ⚙️ application.properties
+
+server.port=8081
 
 
-### application.properties:
 
- server.port=8081
+## ✅ Output
 
+Visit http://localhost:8081/hello
 
+Response:
+Hello, Spring Boot!
 
-
-Output:
-
-
+<img width="2168" alt="Screenshot 2025-04-26 at 09 00 54" src="https://github.com/user-attachments/assets/12a88d01-c1bd-45f2-8e25-5eacfa8e1e8c" />
